@@ -98,11 +98,6 @@ The target is always the pro file, eg the solution file.
 ### Custom
 Custom is an undefined environment, you can script it yourself. Specification:
 ```json
-[{
-	"env": "qt",
-	"pro": "qt/QCheck/QCheck.pro"
-}]
-```
 [{"env": "custom",
 	"commands": [{
 		"command": "xbuild",
@@ -112,6 +107,7 @@ Custom is an undefined environment, you can script it yourself. Specification:
 		}]
 	}]
 }]
+```
 commands is an array of commands which needs to be executed in a synchronous order. The command element is the actual element and arguments is an array which holds the arguments.
 Arguments has also 2 types. The first one is 'type' which can be anything or 'path'. If it's path, the actual path will be added in front of the path, so the CI will be able to find the correct file specified.
 Arg is the argument itself.
